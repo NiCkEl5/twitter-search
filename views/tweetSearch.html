@@ -1,0 +1,28 @@
+<div class="input-group mb-3" id="search-bar">
+    <input type="text" id="inputSearch" name="inputSearch" class="form-control" placeholder="Search in Twitter..." aria-label="Search">
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="submit" id="buttonSearch" disabled>Go!</button>
+    </div>
+</div>
+<div id="filters">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelectLan">Language</label>
+    </div>
+    <select class="custom-select" name="inputGroupSelectLan" id="inputGroupSelectLan">
+      <option selected value='en'>Choose...</option>
+      {% for key, lang in languages %}
+        <option value="{{ lang }}">{{ key }}</option>
+      {% endfor %}
+    </select>
+    <select class="custom-select" name="inputGroupSelectRel" id="inputGroupSelectRel">
+      <option selected>Choose...</option>
+      {% for y in relevance %}
+              <option value="{{ y }}">{{ y }}</option>
+      {% endfor %}
+    </select>
+    <div class="input-group-append">
+      <label class="input-group-text" for="inputGroupSelectRel">Relevance</label>
+    </div>
+  </div>
+</div>

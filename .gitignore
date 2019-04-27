@@ -1,0 +1,7 @@
+.env
+.DS_Store
+composer.phar
+assets/.DS_Store
+vendor/*
+logs/*
+tmp/*

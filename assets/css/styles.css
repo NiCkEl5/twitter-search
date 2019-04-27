@@ -1,0 +1,18 @@
+font-family: 'Open Sans', sans-serif;
+font-family: 'Muli', sans-serif;
+body{
+    padding: 20px;
+}
+.col{
+    word-break: break-word;
+}
+.page {
+    min-width: 240px;
+    max-width: 900px;
+}
+#display {
+  height: 700px;
+}
+.card-body {
+  overflow-y: scroll;
+}
