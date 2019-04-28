@@ -11,7 +11,7 @@ $app = new \Slim\App(['settings' => $config]);
 
 $container = $app->getContainer();
 
-if ( $container['settings'][develop] ) {
+if ( $container['settings']['develop'] ) {
   $dotenv = Dotenv\Dotenv::create(__DIR__);
   $dotenv->load();
 }
