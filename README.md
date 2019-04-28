@@ -9,8 +9,9 @@ For depedency management [compose](https://getcomposer.org/) is used
 >
 >A ```.env``` file must be created at root path with twitter keys
 
-TwitterSearch
-=====
+
+##Instructions for installation and run
+
 **Step 1:** git clone this repo:
 
 **Step 2:** cd to the cloned repo:

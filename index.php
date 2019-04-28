@@ -5,15 +5,18 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 require 'vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::create(__DIR__);
-$dotenv->load();
-
-#$s3_bucket = $_ENV['API_SECRET'];
 $config = include("config/config.php");
 
 $app = new \Slim\App(['settings' => $config]);
 
 $container = $app->getContainer();
+
+if ( $container['settings'][develop] ) {
+  $dotenv = Dotenv\Dotenv::create(__DIR__);
+  $dotenv->load();
+}
+
+
 //using twig for view
 $container['view'] = function ($container) {
     $view = new \Slim\Views\Twig('views/', [

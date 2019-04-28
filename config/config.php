@@ -2,6 +2,7 @@
   return [
           'displayErrorDetails' => true,
           'debug' => true,
+          'develop' => true,
           'relevance' => ['recent', 'popularity'],
           'languages' => [
             "English"=>"en",
