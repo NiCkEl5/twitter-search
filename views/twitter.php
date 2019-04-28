@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="card ">
-  <form action="/search" method="post">
+  <form action="search" method="post">
     <div class="card-header" id="toolbar">
       {{ include('tweetSearch.html') }}
     </div>

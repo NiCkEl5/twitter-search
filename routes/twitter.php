@@ -17,6 +17,7 @@
       $twit_search = $twit->searchTwitter($_POST['inputSearch'],$_POST['inputGroupSelectLan'],$_POST['inputGroupSelectRel']);
 
       if ( sizeof($twit_search->statuses) > 0 ) {
+        $this->logger->addInfo('Results found....');
         foreach ($twit_search->statuses as $value){
           array_push($tweets, ["https://twitter.com/".$value->user->name."/status/".$value->id, $value->text]);
         }
@@ -27,11 +28,9 @@
                                     'languages' => $this->get('settings')['languages'],
                                     'tweetSearch' => $tweets]);
       } else {
+        $this->logger->addInfo('Bad loggin or no result found...');
         return $response->withRedirect('/', 204);
       }
-
-
-
-  });
+  })->setName('search');
 
 ?>
